@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="title">Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <!-- Image Gallery Grid -->
+  <div class="gallery">
+    <div class="gallery-item nature">
+      <img src="https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg" alt="Nature" onclick="openLightbox(0)">
+    </div>
+    <div class="gallery-item city">
+      <img src="https://images.pexels.com/photos/2129796/pexels-photo-2129796.png" alt="City" onclick="openLightbox(1)">
+    </div>
+    <div class="gallery-item animals">
+      <img src="https://images.pexels.com/photos/5483423/pexels-photo-5483423.jpeg" alt="Animals" onclick="openLightbox(2)">
+    </div>
+    <div class="gallery-item nature">
+      <img src="https://images.pexels.com/photos/15576275/pexels-photo-15576275.jpeg" alt="Nature" onclick="openLightbox(3)">
+    </div>
+    <div class="gallery-item city">
+      <img src="https://images.pexels.com/photos/9024407/pexels-photo-9024407.jpeg" alt="City" onclick="openLightbox(4)">
+    </div>
+    <div class="gallery-item animals">
+      <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" alt="Animals" onclick="openLightbox(5)">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-controls">
+      <button onclick="changeImage(-1)">❮ Prev</button>
+      <button onclick="changeImage(1)">Next ❯</button>
+    </div>
+  </div>
+
+  <script src="style.js"></script>
+</body>
+</html>
